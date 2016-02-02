@@ -1,7 +1,7 @@
-
+#!/usr/bin/env python
 
 def bigger(first,second):
-    print max(first,second)
+    print "Max number is: %s" % max(first,second)
     return True
     
 def string_to_num(num):
@@ -11,7 +11,7 @@ def string_to_num(num):
         return float(num)
 
 def answer():
-    return 42
+    return 'But the main answer is: %s' % 42
         
         
 a = raw_input("Input first number:\n")
