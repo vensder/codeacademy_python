@@ -16,14 +16,18 @@ def input_numbers():
     n2 = input_to_float('Input second number:')
     return(n1,n2)
 
+def print_answer(n1,n2,op,result):
+    print(str(n1) + op + str(n2) + ' = ' + str(result))
+    
+
 while True:
     print('Choice action ("+", "-", "*" or "/":)')
     op = input()
     n1,n2 = input_numbers()
     if op == '+':
-        print(str(n1) + ' + ' + str(n2) + ' = ' + str(n1 + n2))
+        print_answer(n1 + n2)
     elif op == '-':
-        print(str(n1) + ' - ' + str(n2) + ' = ' + str(n1 - n2))
+        print_answer(n1 - n2)
 
 
 
