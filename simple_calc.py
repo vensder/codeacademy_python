@@ -19,11 +19,14 @@ def input_numbers():
 while True:
     print('Choice action ("+", "-", "*" or "/":)')
     op = input()
-
-    n1 = n2 = 0
+    n1,n2 = input_numbers()
     if op == '+':
-        n1,n2 = input_numbers()
-        print(str(n1) + ' + '  + str(n2) + ' = ' + str(n1 + n2))
+        print(str(n1) + ' + ' + str(n2) + ' = ' + str(n1 + n2))
+    elif op == '-':
+        print(str(n1) + ' - ' + str(n2) + ' = ' + str(n1 - n2))
+
+
+
     else:
         break
 
