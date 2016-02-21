@@ -22,13 +22,10 @@ def print_answer(n1,n2,op,result):
 while True:
     oplist = ['+','-','*','/']
     op = None
-
     while op not in oplist:
         print('Choice action ("+", "-", "*" or "/":)')
         op = input()
-    
     n1, n2 = input_numbers()
-    
     if op == '+':
         print_answer(n1, n2, op, n1 + n2)
     elif op == '-':
@@ -36,9 +33,9 @@ while True:
     elif op == '*':
         print_answer(n1, n2, op, n1 * n2)
     elif op == '/':
-        print_answer(n1, n2, op, n1 / n2)
+        try:
+            print_answer(n1, n2, op, n1 / n2)
+        except ZeroDivisionError:
+            print('Division by Zero')
     else:
         break
-
-
-
